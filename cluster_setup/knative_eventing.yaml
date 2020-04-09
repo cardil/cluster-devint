@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: knative-serving
+  name: knative-eventing
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "5"
@@ -13,7 +13,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: knative/serving
+    path: knative/eventing
     repoURL: https://github.com/openshift-knative/cluster-devint
     targetRevision: master
   syncPolicy:
